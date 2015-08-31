@@ -4,7 +4,7 @@ user_agent = ("PyEng Bot 0.1")
 
 r = praw.Reddit(user_agent = user_agent)
 
-subreddit = r.get_subreddit("learnpython")
+subreddit = r.get_subreddit("pythonforengineers")
 
 for submission in subreddit.get_hot(limit = 5):
     print "Title: ", submission.title
