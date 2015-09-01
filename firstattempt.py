@@ -9,11 +9,12 @@ r = praw.Reddit(user_agent = 'John Tobin')
 r.login(REDDIT_USERNAME, REDDIT_PASSWORD)
 subreddit = r.get_subreddit('pythonforengineers')
 for submission in subreddit.get_hot(limit=5):
+    f = open("firstattempt.txt", "r+")
+    f.write(str(submission.title) + '\n')
+    f.close()
     titletext = submission.title
     if titletext.find('fam') != -1:
         submission.add_comment('Yo what''s good fam')
     else:
         print 'No fam in this title fam'
-f = open("firstattempt.txt", "w")
-f.write(submission.title + "by" + submission.author + '\n')
-f.close()
+
