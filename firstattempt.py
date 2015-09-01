@@ -14,3 +14,6 @@ for submission in subreddit.get_hot(limit=5):
         submission.add_comment('Yo what''s good fam')
     else:
         print 'No fam in this title fam'
+f = open("firstattempt.txt", "w")
+f.write(submission.title + "by" + submission.author + '\n')
+f.close()
