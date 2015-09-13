@@ -3,8 +3,8 @@ import pdb
 import re
 import os
 
-REDDIT_USERNAME = 'comeonspurs'
-REDDIT_PASSWORD = '305223'
+# REDDIT_USERNAME = 'comeonspurs'
+# REDDIT_PASSWORD = '305223'
 r = praw.Reddit(user_agent = 'John Tobin')
 r.login(REDDIT_USERNAME, REDDIT_PASSWORD)
 subreddit = r.get_subreddit('pythonforengineers')
